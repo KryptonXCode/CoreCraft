@@ -1,1 +1,1 @@
-package me.KaptainKrypton.CommandExecuters;
+package me.Krypton.CommandExecuters;

@@ -1,4 +1,4 @@
-package me.KaptainKrypton.CommandExecuters;
+package me.Krypton.CommandExecuters;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

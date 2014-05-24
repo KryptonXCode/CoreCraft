@@ -1,1 +1,1 @@
-package me.KaptainKrypton.CoreCraft;
+package me.Krypton.CoreCraft;

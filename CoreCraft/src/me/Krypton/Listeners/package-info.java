@@ -1,1 +1,1 @@
-package me.KaptainKrypton.Listeners;
+package me.Krypton.Listeners;

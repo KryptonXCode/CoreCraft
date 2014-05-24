@@ -1,6 +1,6 @@
-package me.KaptainKrypton.CommandExecuters;
+package me.Krypton.CommandExecuters;
 
-import me.KaptainKrypton.CoreCraft.CoreCraft;
+import me.Krypton.CoreCraft.CoreCraft;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
