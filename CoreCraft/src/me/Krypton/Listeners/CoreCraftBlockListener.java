@@ -1,6 +1,6 @@
-package me.KaptainKrypton.Listeners;
+package me.Krypton.Listeners;
 
-import me.KaptainKrypton.CoreCraft.CoreCraft;
+import me.Krypton.CoreCraft.CoreCraft;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

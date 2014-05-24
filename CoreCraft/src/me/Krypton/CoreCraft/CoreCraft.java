@@ -1,15 +1,15 @@
-package me.KaptainKrypton.CoreCraft;
+package me.Krypton.CoreCraft;
 
 import java.util.logging.Logger;
 
-import me.KaptainKrypton.CommandExecuters.FeedExecuter;
-import me.KaptainKrypton.CommandExecuters.HealExecuter;
-import me.KaptainKrypton.CommandExecuters.HideMeExecuter;
-import me.KaptainKrypton.CommandExecuters.IgniteExecuter;
-import me.KaptainKrypton.CommandExecuters.KillExecuter;
-import me.KaptainKrypton.CommandExecuters.ReloadExecuter;
-import me.KaptainKrypton.CommandExecuters.VerifyExecuter;
-import me.KaptainKrypton.Listeners.CoreCraftBlockListener;
+import me.Krypton.CommandExecuters.FeedExecuter;
+import me.Krypton.CommandExecuters.HealExecuter;
+import me.Krypton.CommandExecuters.HideMeExecuter;
+import me.Krypton.CommandExecuters.IgniteExecuter;
+import me.Krypton.CommandExecuters.KillExecuter;
+import me.Krypton.CommandExecuters.ReloadExecuter;
+import me.Krypton.CommandExecuters.VerifyExecuter;
+import me.Krypton.Listeners.CoreCraftBlockListener;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
