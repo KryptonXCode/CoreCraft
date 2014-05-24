@@ -1,0 +1,26 @@
+name: CoreCraft
+version: 0.1
+description: A library of useful commands, listeners, and executers!
+main: me.KaptainKrypton.CoreCraft.CoreCraft
+commands:
+   Heal:
+     description: Heals a selected player!
+     usage: /<command>
+   Kill:
+     description: Kills a selected player!
+     usage: /<command>
+   Ignite:
+     description: Ignites a selected player!
+     usage: /<command>
+   HideMe:
+     description: Hides a selected player!
+     usage: /<command>
+   CoreCraft:
+     description: Check the Availability of the Plugin!
+     usage: /<command>
+   CCReload:
+     description: Reload the Plugin!
+     usage: /<command>
+   Feed:
+     description: Feeds a selected player!
+     usage: /<command>
