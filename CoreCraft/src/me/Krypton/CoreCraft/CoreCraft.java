@@ -10,6 +10,7 @@ import me.Krypton.CommandExecuters.IgniteExecuter;
 import me.Krypton.CommandExecuters.KillExecuter;
 import me.Krypton.CommandExecuters.ReloadExecuter;
 import me.Krypton.CommandExecuters.VerifyExecuter;
+import me.Krypton.CommandExecuters.VersionExecuter;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -52,6 +53,7 @@ public class CoreCraft extends JavaPlugin implements Listener {
 		this.getCommand("CCReload").setExecutor(new ReloadExecuter());
 		this.getCommand("CoreCraft").setExecutor(new VerifyExecuter());
 		this.getCommand("Feed").setExecutor(new FeedExecuter());
+		this.getCommand("ccversion").setExecutor(new VersionExecuter());
 		players = new ArrayList<String>();
 		players = new ArrayList<String>();
 		Bukkit.getPluginManager().registerEvents(this, this);

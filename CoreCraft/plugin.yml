@@ -24,7 +24,6 @@ commands:
    Feed:
      description: Feeds a selected player!
      usage: /<command>
-   Version:
+   CCVersion:
      description: Checks the Version of CoreCraft!
      usage: /<command>
-     alias: ccv
