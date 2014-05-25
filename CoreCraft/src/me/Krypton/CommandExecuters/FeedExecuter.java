@@ -26,10 +26,11 @@ public class FeedExecuter implements CommandExecutor {
 					if (target.getName().equalsIgnoreCase(args[0])) {
 						target.setFoodLevel(20);
 						target.sendMessage(ChatColor.BLUE
-								+ target.getDisplayName() + ": "
-								+ ChatColor.DARK_AQUA + "You were fed by: ");
-						player.sendMessage(ChatColor.GREEN + "You have fed: "
-								+ ChatColor.DARK_AQUA + target.getDisplayName());
+								+ target.getDisplayName() + ", "
+								+ ChatColor.DARK_AQUA + "You Were Fed By: "
+								+ ChatColor.GOLD + player.getDisplayName());
+						player.sendMessage(ChatColor.GREEN + "You Have Fed: "
+								+ ChatColor.BLUE + target.getDisplayName());
 						playerFound = true;
 						break;
 					}

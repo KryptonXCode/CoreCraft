@@ -62,7 +62,6 @@ public class CoreCraft extends JavaPlugin implements Listener {
 	public void OnPlayerJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
 		event.setJoinMessage(this.getConfig().getString("message"));
-
 		if (player.hasPlayedBefore() == false) {
 			player.getInventory().addItem(
 					new ItemStack(Material.STONE_SWORD, 1));
@@ -74,7 +73,11 @@ public class CoreCraft extends JavaPlugin implements Listener {
 			player.getInventory().addItem(
 					new ItemStack(Material.COOKED_BEEF, 10));
 			player.getPlayer().sendMessage(
-					ChatColor.BLUE + "Good Luck, " + ChatColor.AQUA
+					ChatColor.BLUE + "Good Luck, " + ChatColor.GOLD
+							+ player.getDisplayName() + ChatColor.BLUE + "!");
+		} else {
+			event.getPlayer().sendMessage(
+					ChatColor.BLUE + "Welcome back, " + ChatColor.GOLD
 							+ player.getDisplayName() + ChatColor.BLUE + "!");
 		}
 	}

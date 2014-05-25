@@ -24,6 +24,3 @@ commands:
    Feed:
      description: Feeds a selected player!
      usage: /<command>
-   TNTNotify:
-     description: Toggles the TNT Notifier!
-     usage: /<command>

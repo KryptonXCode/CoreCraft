@@ -26,6 +26,8 @@ public class IgniteExecuter implements CommandExecutor {
 				return true;
 			}
 			target.setFireTicks(1000);
+			target.getPlayer()
+					.sendMessage(ChatColor.RED + " You Were Ignited!");
 			return true;
 		}
 		return false;

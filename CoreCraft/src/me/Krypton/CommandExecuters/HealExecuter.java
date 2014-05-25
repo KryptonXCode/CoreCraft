@@ -25,7 +25,7 @@ public class HealExecuter implements CommandExecutor {
 					if (target.getName().equalsIgnoreCase(args[0])) {
 						target.setHealth(20.0);
 						target.sendMessage(ChatColor.BLUE
-								+ target.getDisplayName() + ": "
+								+ target.getDisplayName() + ", "
 								+ ChatColor.DARK_AQUA + "You were healed by: "
 								+ ChatColor.RED + player.getDisplayName());
 						player.sendMessage(ChatColor.GREEN

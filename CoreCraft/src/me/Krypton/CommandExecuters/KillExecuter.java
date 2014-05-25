@@ -25,12 +25,12 @@ public class KillExecuter implements CommandExecutor {
 					if (target.getName().equalsIgnoreCase(args[0])) {
 						target.setHealth(0.0);
 						target.sendMessage(ChatColor.BLUE
-								+ target.getDisplayName() + ": "
+								+ target.getDisplayName() + ", "
 								+ ChatColor.RED + "You were killed by: "
 								+ ChatColor.DARK_AQUA + player.getDisplayName());
 						player.sendMessage(ChatColor.GREEN
 								+ "You have successfuly killed: "
-								+ ChatColor.DARK_AQUA + target.getDisplayName());
+								+ ChatColor.BLUE + target.getDisplayName());
 						playerFound = true;
 						break;
 					}
