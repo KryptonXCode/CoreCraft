@@ -1,5 +1,6 @@
 package me.Krypton.CoreCraft;
 
+import java.util.ArrayList;
 import java.util.logging.Logger;
 
 import me.Krypton.CommandExecuters.FeedExecuter;
@@ -9,7 +10,6 @@ import me.Krypton.CommandExecuters.IgniteExecuter;
 import me.Krypton.CommandExecuters.KillExecuter;
 import me.Krypton.CommandExecuters.ReloadExecuter;
 import me.Krypton.CommandExecuters.VerifyExecuter;
-import me.Krypton.Listeners.CoreCraftBlockListener;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -22,21 +22,29 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class CoreCraft extends JavaPlugin implements Listener{
+public class CoreCraft extends JavaPlugin implements Listener {
 	public static Logger logger = Logger.getLogger("Minecraft");
 	public static CoreCraft plugin;
-	
-	public void onDisable(){
+	ArrayList<String> players;
+
+	@Override
+	public void onDisable() {
 		@SuppressWarnings("unused")
 		PluginDescriptionFile pdffile = this.getDescription();
-		this.getLogger().info(ChatColor.RED + this.getDescription().getFullName() + " v" + this.getDescription().getVersion() + " has been disabled!");
+		this.getLogger().info(
+				ChatColor.RED + this.getDescription().getFullName() + " v"
+						+ this.getDescription().getVersion()
+						+ " has been disabled!");
 	}
-	public void onEnable(){
+
+	@Override
+	public void onEnable() {
 		@SuppressWarnings("unused")
 		PluginDescriptionFile pdffile = this.getDescription();
 		Bukkit.getPluginManager().registerEvents(this, this);
-		this.getLogger().info(ChatColor.GREEN + this.getDescription().getFullName() + " has been enabled!");
-		this.getServer().getPluginManager().registerEvents(new CoreCraftBlockListener(this), this);
+		this.getLogger().info(
+				ChatColor.GREEN + this.getDescription().getFullName()
+						+ " has been enabled!");
 		this.getCommand("HideMe").setExecutor(new HideMeExecuter());
 		this.getCommand("Ignite").setExecutor(new IgniteExecuter());
 		this.getCommand("Heal").setExecutor(new HealExecuter());
@@ -44,20 +52,30 @@ public class CoreCraft extends JavaPlugin implements Listener{
 		this.getCommand("CCReload").setExecutor(new ReloadExecuter());
 		this.getCommand("CoreCraft").setExecutor(new VerifyExecuter());
 		this.getCommand("Feed").setExecutor(new FeedExecuter());
+		players = new ArrayList<String>();
+		players = new ArrayList<String>();
+		Bukkit.getPluginManager().registerEvents(this, this);
 		this.saveDefaultConfig();
 	}
+
 	@EventHandler
-	public void OnPlayerJoin(PlayerJoinEvent event){
+	public void OnPlayerJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
 		event.setJoinMessage(this.getConfig().getString("message"));
-		
-		if(player.hasPlayedBefore() == false){
-			player.getInventory().addItem(new ItemStack(Material.STONE_SWORD, 1));
+
+		if (player.hasPlayedBefore() == false) {
+			player.getInventory().addItem(
+					new ItemStack(Material.STONE_SWORD, 1));
 			player.getInventory().addItem(new ItemStack(Material.STONE_AXE, 1));
-			player.getInventory().addItem(new ItemStack(Material.STONE_PICKAXE, 1));
-			player.getInventory().addItem(new ItemStack(Material.STONE_SPADE, 1));
-			player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF, 10));
-			player.getPlayer().sendMessage(ChatColor.BLUE + "Good Luck, " + ChatColor.AQUA + player.getDisplayName() + ChatColor.BLUE + "!");
+			player.getInventory().addItem(
+					new ItemStack(Material.STONE_PICKAXE, 1));
+			player.getInventory().addItem(
+					new ItemStack(Material.STONE_SPADE, 1));
+			player.getInventory().addItem(
+					new ItemStack(Material.COOKED_BEEF, 10));
+			player.getPlayer().sendMessage(
+					ChatColor.BLUE + "Good Luck, " + ChatColor.AQUA
+							+ player.getDisplayName() + ChatColor.BLUE + "!");
 		}
 	}
 }
