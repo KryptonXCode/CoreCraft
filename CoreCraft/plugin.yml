@@ -27,3 +27,6 @@ commands:
    CCVersion:
      description: Checks the Version of CoreCraft!
      usage: /<command>
+   Time:
+     description: Changes the time in default world to day or night!
+     usage: /<command> day/night
